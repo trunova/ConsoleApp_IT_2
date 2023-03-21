@@ -42,7 +42,9 @@ namespace ConsoleApp_IT_2
             string line;
             try
             {
-                StreamReader sr = new StreamReader(@"D:\sharpi\ConsoleApp_IT_2\ConsoleApp_IT_2\text.txt");
+                string relation = @"..\..\";
+                string path = Path.Combine(Environment.CurrentDirectory, relation, "text.txt");
+                StreamReader sr = new StreamReader(path);
                 line = sr.ReadLine();
                 string text = "";
                 while (line != null)
